@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Hamburger menu</title>
+  </head>
+  <body>
+    <div class="menu-btn">
+      <div class="menu-btn__burger"></div>
+    </div>
+    <script>
+      const $menuBtn = document.querySelector('.menu-btn');
+      let isMenuOpen = false;
+      $menuBtn.addEventListener('click', () => {
+        if (!isMenuOpen) {
+          $menuBtn.classList.add('open');
+        } else {
+          $menuBtn.classList.remove('open');
+        }
+
+        isMenuOpen = !isMenuOpen;
+      });
+    </script>
+  </body>
+</html>
